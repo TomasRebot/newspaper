@@ -18,14 +18,11 @@
     <!-- Font Awesome -->
     <link href="{{asset('backend/plugins/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
     <!-- NProgress -->
-    <link href="{{asset('backend/plugins/nprogress/nprogress.css')}}" rel="stylesheet">
     <!-- bootstrap-daterangepicker -->
-    <link href="{{asset('backend/plugins/bootstrap-daterangepicker/daterangepicker.css')}}" rel="stylesheet">
     <!-- Custom Theme Style -->
     <link href="{{asset('backend/css/custom.css')}}" rel="stylesheet">
     <link href="{{asset('backend/plugins/iCheck/skins/all.css')}}" rel="stylesheet">
     <link href="{{asset('backend/plugins/toastr/toastr.css')}}" rel="stylesheet">
-    <link href="{{asset('backend/plugins/wiked/wickedcss.min.css')}}" rel="stylesheet">
     <link href="{{asset('backend/plugins/animate.css/animate.min.css')}}" rel="stylesheet">
     @yield('scripts')
 
