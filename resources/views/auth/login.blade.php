@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 
 @include('backend.partials.header')
 <body class="login">
@@ -47,8 +49,8 @@
                 <br />
 
                 <div>
-                    <h1><i class="fa fa-ticket "></i> <b>T</b>eatro odeon</h1>
-                    <p>©2019 All Rights Reserved. <a href="javascript:void(0)">Terminos de uso y privcidad</a></p>
+                    <span> <img class="img img-responsive loginferior" src="{{asset('backend/img/logoinferior.png')}}" alt="" srcset=""> </span>
+                    <p>©2019 All Rights Reserved. <a>Terminos de uso y privcidad</a></p>
                 </div>
               </div>
             </form>
@@ -57,4 +59,4 @@
 
   </body>
   @include('backend.partials.scripts')
-
+  </html>

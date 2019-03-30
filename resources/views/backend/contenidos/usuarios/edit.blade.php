@@ -62,22 +62,41 @@
                 </div>
               </div>
               <div class="form-group">
-                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Roles :</label>
-                    <div class="col-md-9 col-sm-9 col-xs-12">
-                      <div class="">
-                          <ul style="list-style: none; padding:10px;">
-                              @foreach($roles as $iterador => $rol)
-                              <li>
-                                <div class="col-md-5">
-                                <input type="checkbox" value="{{$rol->id}}" @if(in_array($rol->id, $rolesUser)) checked @endif()class="flat" name="roles[]">
-                                <label>{{$rol->name}}</label>
-                                </div>
-                              </li>
-                              @endforeach
-                          </ul>
-                      </div>
+                <label class="control-label col-md-3 col-sm-3 col-xs-12">Estado :</label>
+                <div class="col-md-9 col-sm-9 col-xs-12">
+                    <div class="">
+                        <ul style="list-style: none; padding:10px;">
+                            <li>
+                            <div class="col-md-2 pull-left">
+                            <label>Activo</label>
+                            <input type="radio" @if($user->estado) checked="checked"  @endif  value="1" class="flat" name="estado">
+                            </div>
+                            <div class="col-md-2 pull-left ">
+                            <label>Inactivo</label>
+                            <input type="radio" @if(!$user->estado ) checked="checked" @endif  value="0" class="flat" name="estado">
+                            </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12">Roles :</label>
+                <div class="col-md-9 col-sm-9 col-xs-12">
+                    <div class="">
+                        <ul style="list-style: none; padding:10px;">
+                            @foreach($roles as $iterador => $rol)
+                            <li>
+                            <div class="col-md-5">
+                            <input type="checkbox" value="{{$rol->id}}" @if(in_array($rol->id, $rolesUser)) checked @endif()class="flat" name="roles[]">
+                            <label>{{$rol->name}}</label>
+                            </div>
+                            </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
+            </div>
               <div class="ln_solid"></div>
                 <div class="col-md-6 col-sm-6 col-xs-12 ">
                     <button type="submit" class="btn btn-success btn-sm">Guardar</button>

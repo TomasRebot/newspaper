@@ -89,7 +89,12 @@ class UsersController extends Controller
      */
     public function update(UserUpdateFormRequest $request,User $user)
     {
+        if($request->password === NULL)
+        {
+            unset($request['password']);
+            unset($request['password_confirm']);
 
+        }
         $user->update($request->all());
         $user->roles()->sync($request->roles);
         return redirect()->route('panel.users.index')->with('success' ,'usuario modificado con exito');

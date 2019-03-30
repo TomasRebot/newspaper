@@ -51,6 +51,25 @@
             </div>
             </div>
             <div class="form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12">Estado :</label>
+            <div class="col-md-9 col-sm-9 col-xs-12">
+                <div class="">
+                    <ul style="list-style: none; padding:10px;">
+                        <li>
+                        <div class="col-md-2 pull-left">
+                        <label>Activo</label>
+                        <input type="radio" value="1" class="flat" name="estado">
+                        </div>
+                        <div class="col-md-2 pull-left ">
+                        <label>Inactivo</label>
+                        <input type="radio" value="0" class="flat" name="estado">
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            <div class="form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Roles :</label>
                 <div class="col-md-9 col-sm-9 col-xs-12">
                   <div class="">

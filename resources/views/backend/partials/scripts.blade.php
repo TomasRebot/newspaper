@@ -9,5 +9,3 @@
     <script src="{{asset('backend/js/custom.js')}}"></script>
     <script src="{{asset('backend/plugins/iCheck/icheck.js')}}"></script>
     <script src="{{asset('backend/plugins/toastr/toastr.min.js')}}"></script>
-  </body>
-</html>

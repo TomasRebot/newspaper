@@ -1,13 +1,14 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
 @include('backend.partials.header')
+</head>
   <body class="nav-md">
     <div class="container body">
       <div class="main_container">
       @include('backend.menu.nav')
         <!-- top navigation -->
-
         <!-- /top navigation -->
-
         <!-- page content -->
         <div class="right_col" role="main" >
             <div class="animated fadeInRight">
@@ -22,5 +23,6 @@
       </div>
     </div>
 @include('backend.partials.scripts')
-@include('backend.partials.toastr')
-
+@include('backend.partials.errors-success')
+</body>
+</html>

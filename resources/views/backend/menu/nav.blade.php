@@ -40,9 +40,7 @@
               </ul>
             </div>
           </div>
-
           <!-- /sidebar menu -->
-
           <!-- /menu footer buttons -->
             @include('backend.menu.partials.menu-footer')
           <!-- /menu footer buttons -->

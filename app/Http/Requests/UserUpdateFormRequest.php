@@ -25,9 +25,7 @@ class UserUpdateFormRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'email' => 'required|email',
-            'password' => 'required',
-            'password_confirm' => 'required|same:password',
+
         ];
     }
 
@@ -35,13 +33,6 @@ class UserUpdateFormRequest extends FormRequest
     {
         return [
             'name.required' => 'El :attribute es obligatorio.',
-            'email.required' => 'El :attribute es obligatorio',
-            'email.email' => 'El :attribute debe ser un :attribute valido',
-            'email.unique' => 'El :attribute ya existe en nuestros registros',
-            'price.min' => 'El :attribute debe ser mínimo 0',
-            'password.required' => 'Debes ingresar una contraseña',
-            'password_confirm.required' => 'Debes confirmar la contraseña',
-            'password_confirm.same' => 'Las contraseñas no coinciden',
         ];
     }
 }
