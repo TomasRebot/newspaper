@@ -41,7 +41,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                @can('panel.users.edit')
+
                 @foreach($users as $user)
                 <tr class="even pointer">
                     <td class="a-center ">
@@ -54,7 +54,7 @@
                     </td>
                 </tr>
                 @endforeach
-                @endcan
+
                 </tbody>
             </table>
             </div>

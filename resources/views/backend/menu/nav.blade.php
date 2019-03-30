@@ -34,54 +34,11 @@
             <div class="menu_section">
               <h3>Administracion</h3>
               <ul class="nav side-menu">
-                    @php
-                    $dir = resource_path().'/views/backend/menu/secciones/administracion';
-                    $includepath =  "backend.menu.secciones.administracion.";
-                    $includes = [];
-                    $directorio = opendir($dir);
-                    $archivos = [];
-                    while ($archivo = readdir($directorio))
-                    {
-                        if (!is_dir($archivo))
-                        {
-                            $ruta =  $includepath . str_replace(".blade.php", "", $archivo);
-                            array_push( $includes ,$ruta );
-                        }
-                    }
-                    closedir($directorio);
-
-                    @endphp
-                    @foreach ($includes as $inc)
+                @foreach (Show::menu() as $inc)
                     @include($inc)
-                    @endforeach
+                @endforeach
               </ul>
             </div>
-            <div class="menu_section">
-              <h3>Website</h3>
-              <ul class="nav side-menu">
-                    @php
-                    $dir = resource_path().'/views/backend/menu/secciones/website';
-                    $includepath =  "backend.menu.secciones.website.";
-                    $includes = [];
-                    $directorio = opendir($dir);
-                    $archivos = [];
-                    while ($archivo = readdir($directorio))
-                    {
-                        if (!is_dir($archivo))
-                        {
-                            $ruta =  $includepath . str_replace(".blade.php", "", $archivo);
-                            array_push( $includes ,$ruta );
-                        }
-                    }
-                    closedir($directorio);
-
-                    @endphp
-                    @foreach ($includes as $inc)
-                    @include($inc)
-                    @endforeach
-              </ul>
-            </div>
-
           </div>
 
           <!-- /sidebar menu -->

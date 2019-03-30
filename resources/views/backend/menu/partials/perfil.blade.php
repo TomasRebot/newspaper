@@ -19,9 +19,9 @@
       </li>
       <li><a href= href="{{ route('logout') }}"
         onclick="event.preventDefault();
-                      document.getElementById('logout-form').submit();">
+        document.getElementById('logout-form').submit();">
         <i class="fa fa-sign-out pull-right"></i> Cerrar sesion</a><form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                @csrf
+        @csrf
         </form>
         </li>
 

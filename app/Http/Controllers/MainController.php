@@ -8,7 +8,7 @@ class MainController extends Controller
 {
 
     public function frontend(){
-        return view('frontend.index');
+        return view('backend.contenidos.index');
     }
 
     public function backend()
