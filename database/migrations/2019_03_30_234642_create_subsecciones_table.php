@@ -15,8 +15,8 @@ class CreateSubseccionesTable extends Migration
     {
         Schema::create('subsecciones', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('seccion_id');
-
+            $table->unsignedInteger('seccion_id');     
+                   
             //relationships
             $table->foreign('seccion_id')->references('id')->on('secciones')
             ->onDelete('');
