@@ -1,4 +1,4 @@
-<?php
+6<?php
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
@@ -15,7 +15,8 @@ class CreateSeccionesTable extends Migration
     {
         Schema::create('secciones', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('titulo');
+            $table->string('ambito');
+            $table->unsignedInteger('visitas');
             //relationships
             $table->timestamps();
         });

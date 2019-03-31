@@ -15,6 +15,10 @@ class CreateNoticiasTable extends Migration
     {
         Schema::create('noticias', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('estado');
+            $table->unsignedInteger('novedad');
+
+            //relationships
             $table->timestamps();
         });
     }
