@@ -1,10 +1,10 @@
-6<?php
+<?php
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSeccionesTable extends Migration
+class CreatePublicidadesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,16 @@ class CreateSeccionesTable extends Migration
      */
     public function up()
     {
-        Schema::create('secciones', function (Blueprint $table) {
+        Schema::create('publicidades', function (Blueprint $table) {
             $table->increments('id');
-            $table->enum('ambito',['locales','provinciales','nacionales','internacionales']);
-            $table->string('titulo',64);
-            //relationships
+            $table->string('nombre');
+            $table->unsignedInteger('empresa_id')->nullable();
+            $table->string('url')->nullable();
+            $table->unsignedInteger('created_by');
+            $table->unsignedInteger('updated_by');
             $table->timestamps();
+
+
         });
     }
 
@@ -29,6 +33,6 @@ class CreateSeccionesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('secciones');
+        Schema::dropIfExists('publicidades');
     }
 }

@@ -15,7 +15,16 @@ class CreateResourcesTable extends Migration
     {
         Schema::create('resources', function (Blueprint $table) {
             $table->increments('id');
-
+            $table->enum('tipo',['imagen','video']);
+            $table->enum('uso',['portada','galeria','miniatura','icono','url']);
+            $table->integer('estado');
+            $table->integer('orden');
+            $table->string('mime');
+            $table->string('grupo');
+            $table->integer('relacionado')->unsigned();
+            $table->string('archivo');
+            $table->string('titulo');
+            $table->string('descripcion',254);
             //relationship
             $table->timestamps();
         });

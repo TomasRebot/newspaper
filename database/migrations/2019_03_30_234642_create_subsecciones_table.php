@@ -15,14 +15,13 @@ class CreateSubseccionesTable extends Migration
     {
         Schema::create('subsecciones', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('seccion_id');     
-                   
+            $table->string('titulo',64);
+
+            $table->unsignedInteger('seccion_id')->nullable();
             //relationships
             $table->foreign('seccion_id')->references('id')->on('secciones')
-            ->onDelete('');
-
-            ;
-
+            ->onDelete('set null')
+            ->onCascade('set null');
             $table->timestamps();
         });
     }
