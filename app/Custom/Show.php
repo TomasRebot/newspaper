@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Custom;
 
 class Show
 {
@@ -23,6 +23,20 @@ class Show
         asort($includes, SORT_NUMERIC);
         for($i = 0 ; $i < count($includes); $i++)$includes[$i] = $includepath.$includes[$i];
         return $includes;
+
+    }
+
+    public function routes($routesDir)
+    {
+
+        if(is_dir($routesDir)){
+            $dir=dir($routesDir);
+            while($entry=$dir->read()){
+                if(substr($entry,0,1)===".")continue;
+                 include($routesDir."/".$entry);
+            }
+        }
+
 
     }
 }

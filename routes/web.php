@@ -11,14 +11,7 @@
 |
 */
 
-$routesDir = dirname(__FILE__)."/routes";
-if(is_dir($routesDir)){
-    $dir=dir($routesDir);
-    while($entry=$dir->read()){
-        if(substr($entry,0,1)===".")continue;
-        include($routesDir."/".$entry);
-    }
-}
+Show::routes(dirname(__FILE__)."/routes");
 
 
 

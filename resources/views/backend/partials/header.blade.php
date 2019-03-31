@@ -8,7 +8,6 @@
     <title>{{env('APP_NAME')}}</title>
     <link rel="icon" type="image/png" href="{{asset('backend/img/favicon_diario.png')}}" />
 
-    link
     <!-- Bootstrap -->
     <link href="{{asset('backend/plugins/bootstrap/dist/css/bootstrap.css')}}" rel="stylesheet">
     <!-- Font Awesome -->
